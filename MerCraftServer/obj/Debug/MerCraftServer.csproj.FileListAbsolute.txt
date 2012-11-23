@@ -1,0 +1,11 @@
+c:\users\merbo\documents\visual studio 11\Projects\MerCraftServer\MerCraftServer\bin\Debug\MerCraftServer.exe.config
+c:\users\merbo\documents\visual studio 11\Projects\MerCraftServer\MerCraftServer\obj\Debug\MerCraftServer.csprojResolveAssemblyReference.cache
+c:\users\merbo\documents\visual studio 11\Projects\MerCraftServer\MerCraftServer\bin\Debug\MerCraftServer.exe
+c:\users\merbo\documents\visual studio 11\Projects\MerCraftServer\MerCraftServer\bin\Debug\MerCraftServer.pdb
+c:\users\merbo\documents\visual studio 11\Projects\MerCraftServer\MerCraftServer\bin\Debug\ICSharpCode.SharpZipLib.dll
+c:\users\merbo\documents\visual studio 11\Projects\MerCraftServer\MerCraftServer\obj\Debug\MerCraftServer.exe
+c:\users\merbo\documents\visual studio 11\Projects\MerCraftServer\MerCraftServer\obj\Debug\MerCraftServer.pdb
+c:\Users\Merbo\Documents\Visual Studio 11\Projects\MerCraftServer\MerCraftServer\bin\Debug\MerCraftServer.exe.manifest
+c:\Users\Merbo\Documents\Visual Studio 11\Projects\MerCraftServer\MerCraftServer\bin\Debug\MerCraftServer.application
+c:\Users\Merbo\Documents\Visual Studio 11\Projects\MerCraftServer\MerCraftServer\obj\Debug\MerCraftServer.exe.manifest
+c:\Users\Merbo\Documents\Visual Studio 11\Projects\MerCraftServer\MerCraftServer\obj\Debug\MerCraftServer.application
