@@ -26,11 +26,11 @@ namespace MerCraftServer
             webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(this.ProgressChanged);
         }
 
-        public bool upToDate()
+        public async Task<bool> upToDate()
         {
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create("http://173.48.92.80/MerCraft-server/version.txt");
             req.Method = "GET";
-            WebResponse resp = req.GetResponse();
+            WebResponse resp = await req.GetResponseAsync();
             StreamReader sr = new StreamReader(resp.GetResponseStream(), System.Text.Encoding.UTF8);
             serverVersion = sr.ReadToEnd();
             sr.Close();
@@ -50,13 +50,11 @@ namespace MerCraftServer
             return version == serverVersion && correctJar;
         }
 
-        public bool Update()
+        public async void Update()
         {
-            bool ret = true;
-
             try
             {
-                if (!upToDate())
+                if (!await upToDate())
                 {
                     Program.core.Log("Outdated. Updating to version " + serverVersion, logLevel.Download);
                     downloadFileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), ".mercraft-server", "Standard.zip");
@@ -69,7 +67,7 @@ namespace MerCraftServer
                             if (i == split.Length)
                             {
                                 if (File.Exists(tmp))
-                                    return false;
+                                    return;
                                 else
                                     webClient.DownloadFileAsync(new Uri("http://173.48.92.80/MerCraft-server/Downloads/Version-" + serverVersion + "/Standard.zip"), downloadFileName);
                             }
@@ -90,8 +88,6 @@ namespace MerCraftServer
             {
                 Program.core.Log(ex.ToString(), logLevel.Error);
             }
-
-            return ret;
         }
 
         private void Complete(object sender, AsyncCompletedEventArgs e)
